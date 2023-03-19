@@ -1,8 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - entry point
+ *
+ *
+ * Return: always return 0
+ *
+ */
 int main(void)
 {
 	int n;
@@ -11,14 +15,14 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	ld = n % 10;
+
 	if (ld < 6 || ld != 0)
 	{
-		printf("Last digit of %d", n, " is %d", ld)
-		printf(" and is less than 6 and not 0");
+		printf("Last digit of %d and is less than 6 and not 0", n, ld);
 	}
 	else if (ld > 5)
 	{
-	printf("Last digit of %d", n, "and is greater than 5");
+		printf("Last digit of %d and is greater than 5", n);
 	}
 	else
 	{
