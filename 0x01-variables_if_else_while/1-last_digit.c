@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - entry point
  *
@@ -16,7 +17,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	ld = n % 10;
 
-	if (ld < 6 || ld != 0)
+	if (ld < 6 && ld != 0)
 	{
 		printf("Last digit of %d and is less than 6 and not 0", n, ld);
 	}
