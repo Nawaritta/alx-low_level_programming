@@ -1,17 +1,20 @@
 #include <stdio.h>
+
 /**
  * main - entry point
+ *
  *
  * Return: alway returns 0
  *
  */
+
 int main(void)
 {
 	int i;
 	int j;
 	int k;
 
-	for(k = 0; k < 8; k++)
+	for (k = 0; k < 8; k++)
 	{
 		for (i = k + 1; i < 9; i++)
 		{
