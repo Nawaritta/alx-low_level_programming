@@ -19,7 +19,7 @@ for (ii = 0; ii < 10; ii++)
 {
 	for (jj = 0; jj < 9; jj++)
 	{
-		for (i = 0; i < 10; i++)
+		for (i = ii; i < 10; i++)
 		{
 			for (j = jj + 1 ; j < 10; j++)
 			{
