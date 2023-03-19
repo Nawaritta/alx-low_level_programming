@@ -2,10 +2,13 @@
 #include <stdio.h>
 #include <time.h>
 /**
- *main entry point
+ * main - Entry point
  *
- *return: always 0
+ * Description: This program will assign a random number to the variable n
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int n;
@@ -15,12 +18,10 @@ int main(void)
 	if (n > 0)
 	{
 		printf("%d is positive", n);
-	}
-	else if (n < 0)
+	} else if (n < 0)
 	{
 		printf("%d is negative", n);
-	}
-	else
+	} else
 	{
 		printf("%d is zero", n);
 	}
