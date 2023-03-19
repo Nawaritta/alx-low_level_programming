@@ -5,7 +5,7 @@
  * main - entry point
  *
  *
- * Return: always return 0
+ * Return: always 0
  *
  */
 int main(void)
@@ -19,15 +19,15 @@ int main(void)
 
 	if (ld < 6 && ld != 0)
 	{
-		printf("Last digit of %d and is less than 6 and not 0", n, ld);
+		printf("Last digit of %d is %d and is less than 6 and not 0", n, ld);
 	}
 	else if (ld > 5)
 	{
-		printf("Last digit of %d and is greater than 5", n);
+		printf("Last digit of %d is %d and is greater than 5", n, ld);
 	}
 	else
 	{
-	printf("is 0 and is 0");
+		printf("Last digit of %d is 0 and is 0", n);
 	}
 	printf("\n");
 	return (0);
