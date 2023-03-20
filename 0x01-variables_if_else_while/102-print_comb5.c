@@ -21,7 +21,7 @@ for (ii = 0; ii < 10; ii++)
 	{
 		for (i = ii; i < 10; i++)
 		{
-			if (i == ii && jj < 8)
+			if (i == ii && jj < 9)
 			{
 				j = jj + 1;
 			}
