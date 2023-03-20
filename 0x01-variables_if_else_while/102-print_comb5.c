@@ -23,15 +23,15 @@ for (ii = 0; ii < 10; ii++)
 		{
 			if (i == ii)
 			{
-				j = jj;
+				j = jj + 1;
 			}
 			else
 			{
 				j = 0;
 			}
-			while (j < 10 && i == ii)
+			while (j < 10)
 			{
-        			putchar((ii) + '0');
+				putchar((ii) + '0');
 				putchar((jj) + '0');
 				putchar(' ');
 				putchar((i) + '0');
@@ -42,7 +42,7 @@ for (ii = 0; ii < 10; ii++)
 					putchar(' ');
 				}
 				j++;
- 			}
+			}
 		}
 	}
 }
