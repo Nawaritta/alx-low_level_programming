@@ -21,8 +21,13 @@ for (ii = 0; ii < 10; ii++)
 	{
 		for (i = ii; i < 10; i++)
 		{
-			for (j = jj + 1 ; j < 10; j++)
+			j = jj;
+			while (j < 10 && i == ii)
 			{
+				if (j == 9)
+				{
+					j = 0;
+				}
 				putchar((ii) + '0');
 				putchar((jj) + '0');
 				putchar(' ');
@@ -33,6 +38,7 @@ for (ii = 0; ii < 10; ii++)
 					putchar(',');
 					putchar(' ');
 				}
+				j++;
 			}
 		}
 	}
