@@ -17,11 +17,11 @@ int jj;
 
 for (ii = 0; ii < 10; ii++)
 {
-	for (jj = 0; jj < 9; jj++)
+	for (jj = 0; jj < 10; jj++)
 	{
 		for (i = ii; i < 10; i++)
 		{
-			if (i == ii)
+			if (i == ii && jj < 8)
 			{
 				j = jj + 1;
 			}
