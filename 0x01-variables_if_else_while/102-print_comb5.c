@@ -21,14 +21,17 @@ for (ii = 0; ii < 10; ii++)
 	{
 		for (i = ii; i < 10; i++)
 		{
-			j = jj;
+			if (i == ii)
+			{
+				j = jj;
+			}
+			else
+			{
+				j = 0;
+			}
 			while (j < 10 && i == ii)
 			{
-				if (j == 9)
-				{
-					j = 0;
-				}
-				putchar((ii) + '0');
+        			putchar((ii) + '0');
 				putchar((jj) + '0');
 				putchar(' ');
 				putchar((i) + '0');
@@ -39,7 +42,7 @@ for (ii = 0; ii < 10; ii++)
 					putchar(' ');
 				}
 				j++;
-			}
+ 			}
 		}
 	}
 }
