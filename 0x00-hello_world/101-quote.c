@@ -7,14 +7,6 @@
  */
 int main(void)
 {
-	int i;
-	char qt[70] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-
-	i = 0;
-	do {
-		putchar(qt[i]);
-		i++;
-	} while (i < strlen(qt));
-	putchar('\n');
+	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	return (0);
 }
