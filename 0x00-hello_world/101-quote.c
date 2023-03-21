@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * main - Entry point
  *
@@ -6,14 +7,14 @@
  */
 int main(void)
 {
-	int = i;
-	char quote[70] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int i;
+	char qt[70] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
 	i = 0;
 	do {
-		putchar(quote[i]);
+		putchar(qt[i]);
 		i++;
-	} while (i < strlen(quote));
+	} while (i < strlen(qt));
 
 	return (0);
 }
