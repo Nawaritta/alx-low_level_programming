@@ -19,17 +19,17 @@ for (ii = 0; ii < 10; ii++)
 {
 	for (jj = 0; jj < 10; jj++)
 	{
-		for (i = ii; i < 10; i++)
+		if (jj < 9)
 		{
-			if (i == ii && jj < 9)
-			{
-				j = jj + 1;
-			}
-			else
-			{
-				j = 0;
-				i++;
-			}
+			i = ii;
+			j = jj + 1;
+		} else
+		{
+			i = ii + 1
+			j = 0;
+		}
+		while (i < 10)
+		{
 			while (j < 10)
 			{
 				putchar((ii) + '0');
@@ -44,6 +44,7 @@ for (ii = 0; ii < 10; ii++)
 				}
 				j++;
 			}
+			i++;
 		}
 	}
 }
