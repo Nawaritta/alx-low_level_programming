@@ -28,6 +28,7 @@ for (ii = 0; ii < 10; ii++)
 			else
 			{
 				j = 0;
+				i++;
 			}
 			while (j < 10)
 			{
