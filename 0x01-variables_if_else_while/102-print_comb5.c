@@ -25,7 +25,7 @@ for (ii = 0; ii < 10; ii++)
 			j = jj + 1;
 		} else
 		{
-			i = ii + 1
+			i = ii + 1;
 			j = 0;
 		}
 		while (i < 10)
