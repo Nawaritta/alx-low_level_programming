@@ -20,16 +20,15 @@ for (ii = 0; ii < 10; ii++)
 	for (jj = 0; jj < 10; jj++)
 	{
 		if (jj < 9)
-		{
 			i = ii;
-			j = jj + 1;
-		} else
-		{
+		else
 			i = ii + 1;
-			j = 0;
-		}
 		while (i < 10)
 		{
+			if (i == ii)
+				j = jj + 1;
+			else
+				j = 0;
 			while (j < 10)
 			{
 				putchar((ii) + '0');
