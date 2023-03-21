@@ -2,10 +2,10 @@
 /**
  * main - Entry point
  *
- * Return: always 0
+ * Return: always 0 (Success)
  */
 int main(void)
 {
-	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 60);
 	return (0);
 }
