@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *print_alphabet - function that prints alphabet
- *@c: is a character to print
- */
+*print_alphabet - function that prints alphabet
+*@c: is a character to print
+*/
 void print_alphabet(void)
 {
 	char c;
