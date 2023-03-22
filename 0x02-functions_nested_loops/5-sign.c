@@ -18,8 +18,8 @@ int print_sign(int n)
 			x = 1;
 			else
 				_putchar('0');
-				x = 0;
+			x = 0;
 		}
 	}
-		return (x);
+	return (x);
 }
