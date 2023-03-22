@@ -8,7 +8,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+int _putchar(char c);
 /**
  *print_alphabet - function that prints alphabet
  *@c: is a character to print
