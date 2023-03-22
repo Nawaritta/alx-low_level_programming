@@ -39,17 +39,17 @@ int _isalpha(int c);
 int print_sign(int n);
 /**
  * _abs - gives absolute value
- * @int: integer inputed
+ * @a: integer inputed
  * Return: abs value of int
  */
-int _abs(int);
+int _abs(int a);
 /**
  * print_last_digit - prints last digit
  *
- * @int: integer to treat
+ * @i: integer to treat
  * Return: last digit of integer
  */
-int print_last_digit(int);
+int print_last_digit(int i);
 /**
  * jack_bauer - prints every minute of the day
  *
@@ -63,10 +63,11 @@ void jack_bauer(void);
 void times_table(void);
 /**
  * add - adds two integers
- * @int: two integers to add
+ * @a: first number
+ * @b:second integes to add
  * Return: returns an addition
  */
-int add(int, int);
+int add(int a, int b);
 /**
  * print_to_98 - prints to 98
  * @n: beginning number
