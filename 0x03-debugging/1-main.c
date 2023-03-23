@@ -16,7 +16,9 @@ int main(void)
 	while (i < 10)
 	{
 /**
-i is not incremented so the condition to break the loop will never be true */
+ *i is not incremented
+ *the condition to break the loop will never be true
+*/
 		putchar(i);
 	}
 
