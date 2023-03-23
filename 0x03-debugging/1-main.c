@@ -2,7 +2,9 @@
 
 /**
  * main - causes an infinite loop
- * Return: 0
+ *@i is not incremented
+ *the condition to break the loop will never be true
+ *Return: 0
  */
 
 int main(void)
@@ -15,10 +17,6 @@ int main(void)
 
 	while (i < 10)
 	{
-/**
- *i is not incremented
- *the condition to break the loop will never be true
-*/
 		putchar(i);
 	}
 
