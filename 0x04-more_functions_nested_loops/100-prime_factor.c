@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-        int i = 3;
+	int i = 3;
 	long n = 612852475143;
 
 	while (i != n)
@@ -15,9 +15,7 @@ int main(void)
 		{
 			n = n / i;
 		} else
-		{
 			i++;
-		}
 	}
 	printf("%ld\n", n);
 	return (0);
