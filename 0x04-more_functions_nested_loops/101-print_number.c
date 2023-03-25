@@ -28,26 +28,19 @@ void print_number(int n)
 		if (n < 0)
 		{
 			_putchar('-');
-
 			i = -n;
 		} else
-		{
 			i = n;
-		}
-
 		while (d > 0)
 		{
 			j = d - 1;
 			a = 1;
-
 			while (j > 0)
 			{
 				a *= 10;
 				j--;
 			}
-
 			_putchar((i / a) + '0');
-
 			i = i - ((i / a) * a);
 			d--;
 		}
