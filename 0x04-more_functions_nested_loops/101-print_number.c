@@ -1,11 +1,9 @@
 #include "main.h"
-
 /**
  *print_number - numbers using putchar
  *@n: number to print
  *Return nothing
  */
-
 void print_number(int n)
 {
 	int a;
