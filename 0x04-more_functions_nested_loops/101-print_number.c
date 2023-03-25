@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  *print_number - numbers using putchar
  *@n: number to print
@@ -7,20 +8,24 @@
 
 void print_number(int n)
 {
-	if (n > 9)
+	int a;
+	int i;
+	int d;
+
+	d = 0;
+	i = n;
+	do {
+		i /= 10;
+		++d;
+	} while (i != 0);
+	i = n;
+
+	while (i != n % 10)
 	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-	} else
-	{
-		if (n > 0 && )
-		{
-			_putchar((n % 10) + '0');
-		} else
-		{
-			_putchar('-');
-			_putchar((n % 10) + '0');
-		}
+		a = pow(10, (d - 1));
+		_putchar((i / a) + '0');
+		i = i - ((i / a) * a);
+		d--;
 	}
-	_putchar('\n');
+	_putchar((n % 10) + '0');
 }
