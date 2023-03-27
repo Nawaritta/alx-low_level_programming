@@ -39,3 +39,4 @@ void print_number(int n)
 		d--;
 	}
 }
+for (ii = 0; ii < 10; ii++)
