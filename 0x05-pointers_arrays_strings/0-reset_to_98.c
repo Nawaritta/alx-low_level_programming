@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *void reset_to_98- updated the value of an int var
+ *reset_to_98 - updated the value of an int var
  *@n: the pointer
  */
 void reset_to_98(int *n)
