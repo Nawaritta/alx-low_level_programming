@@ -16,16 +16,17 @@ void rev_string(char *s)
 		++len;
 	}
 	if (len % 2)
-		n = (len / 2) - 1;
+		n = len / 2;
 	else
-		n = ((len - 1) / 2) - 1;
+		n = (len - 1) / 2;
+	i = 0;
 
-	while (n > 0)
+	while (i < n)
 	{
-		stemp = s[len - 1 - n];
-		s[len - 1 - n] = s[n];
-		s[n] = stemp;
-		n--;
+		stemp = s[len - 1 - i];
+		s[len - 1 - i] = s[i];
+		s[i] = stemp;
+		i++;
 	}
 	_putchar('\n');
 }
