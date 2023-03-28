@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *puts2 - prints every other character
  *@str: point to a string
@@ -12,11 +13,9 @@ void puts2(char *str)
 	{
 		++len;
 	}
-	i = 0;
-	while (i < len)
+	for (i = 0; i < len; i += 2)
 	{
 		_putchar(str[i]);
-		i += 2;
 	}
 	_putchar('\n');
 }
