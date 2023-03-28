@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *puts_half(char *str)- print half of a string
  *@str: point to a string
