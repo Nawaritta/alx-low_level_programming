@@ -21,11 +21,11 @@ void rev_string(char *s)
 		n = (len - 1) / 2;
 	i = 0;
 
-	while (n >= 0)
+	while (i < n)
 	{
-		stemp = s[len - n];
-		s[len - n] = s[n-1];
-		s[n - 1] = stemp;
-		n--;
+		stemp = s[len - i - 1];
+		s[len - i - 1] = s[i];
+		s[i] = stemp;
+		i++;
 	}
 }
