@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
  *puts_half(char *str)- print half of a string
  *@str: point to a string
@@ -9,11 +10,7 @@ void puts_half(char *str)
 	int i;
 	int len;
 
-	len = 0;
-	while (str[len] != '\0')
-	{
-		++len;
-	}
+	len = _strlen(str);
 
 	if (len % 2 == 0)
 		n = len / 2;
