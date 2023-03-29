@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
  *rev_string - reverses a string
  *@s: string to revers
@@ -10,11 +11,7 @@ void rev_string(char *s)
 	int n;
 	char stemp;
 
-	len = 0;
-	while (s[len] != '\0')
-	{
-		++len;
-	}
+	len = _strlen(s);
 	if (len % 2)
 		n = len / 2;
 	else
