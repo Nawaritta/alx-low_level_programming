@@ -11,7 +11,7 @@ char *cap_string(char *str)
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 	   		str[i] = str[i] - 32;
-		while (str[i] != ('\t' && '\n' && ' ' && '.' && ';' && ',' && '(' && ')' && '{' && '{' && '?' && '!' && '"'))
+		while (str[i] != '\t' && str[i] != '\n' && str[i] != ' ' && str[i] != '.' && str[i] != ';' && str[i] != ',' && str[i] != '(' && str[i] != ')' && str[i] != '{' && str[i] != '{' && str[i] != '?' && str[i] != '!' && str[i] != '"')
 			i++;
 
 		i++;
