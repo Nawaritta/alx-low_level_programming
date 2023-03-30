@@ -17,7 +17,7 @@ char *cap_string(char *str)
 		}
 		j = 1;
 
-		if (str[i] != ' ' || str[i] == '.' || str[i] == '\0')
+		if (str[i] == ' ' || str[i] == '.' || str[i] == '\0')
 			j = 0;
 		i++;
 	}
