@@ -1,5 +1,5 @@
 /**
- *_strncat - string concatenation 2
+ *_strncpy - string concatenation 2
  *@dest: first string
  *@src: second string
  *@n: number of characters to take from the second string
@@ -11,7 +11,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (k < n)
 	{
-		dest[k]=src[k];
+		dest[k] = src[k];
 		if (src[k] == '\0')
 			break;
 		k++;

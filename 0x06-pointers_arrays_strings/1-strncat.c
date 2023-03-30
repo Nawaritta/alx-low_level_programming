@@ -10,17 +10,17 @@ char *_strncat(char *dest, char *src, int n)
 	int k = 0;
 	int i = 0;
 
-	char *concat = &dest[0];
-
-	while (concat[k] != '\0')
+	while (dest[k] != '\0')
 	{
 		k++;
 	}
-	do {
-		concat[k] = src[i];
+	while (i < n)
+	{
 		dest[k] = src[i];
+		if (src[i] == '\0')
+			break;
 		i++;
 		k++;
-	} while (src[i] != '\0' && i < n);
-	return (concat);
+	}
+	return (dest);
 }
