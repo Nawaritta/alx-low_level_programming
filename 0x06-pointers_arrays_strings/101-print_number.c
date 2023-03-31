@@ -8,9 +8,8 @@ void print_number(int n)
 	int a;
 	int i;
 	int j;
-	int d;
+	int d = 0;
 
-	d = 0;
 	i = n;
 	do {
 		i /= 10;
