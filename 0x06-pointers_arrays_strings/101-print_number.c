@@ -4,9 +4,7 @@
  *@n: integer to print
  */
 void print_number(int n)
-{
-	int a;
-	int i;
+{	int i;
 	int j;
 	int d = 0;
 
@@ -19,21 +17,19 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		i = -n;
-	} else
-		i = n;
-
+		n = -n;
+	}
 	while (d > 0)
 	{
 		j = d - 1;
-		a = 1;
+		i = 1;
 		while (j > 0)
 		{
-			a *= 10;
+			i *= 10;
 			j--;
 		}
-		_putchar((i / a) + '0');
-		i = i - ((i / a) * a);
+		_putchar((n / i) + '0');
+		n = n - ((n / i) * i);
 		d--;
 	}
 }
