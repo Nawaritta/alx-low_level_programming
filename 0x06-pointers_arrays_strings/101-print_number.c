@@ -4,7 +4,8 @@
  *@n: integer to print
  */
 void print_number(int n)
-{	int i;
+{
+	int i;
 	int j;
 	int d = 0;
 
