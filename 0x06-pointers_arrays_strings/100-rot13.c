@@ -6,22 +6,18 @@
  */
 char *rot13(char *s)
 {
-	char code[] = "abcdefghijklmnopqrstuvwxyznopqrstuvwxyzabcdefghijklm";
+	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i;
 	int j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 26; j++)
+		for (j = 0; j < 52; j++)
 		{
-			if (s[i] == code[j])
+			if (s[i] == input[j])
 			{
-				s[i] = code[j + 26];
-				break;
-			}
-			if (s[i] == code[j] - 32)
-			{
-				s[i] = code[j + 26] - 32;
+				s[i] = output[j];
 				break;
 			}
 		}
