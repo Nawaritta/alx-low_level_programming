@@ -6,32 +6,39 @@
 void print_number(int n)
 {
 	int i;
-	unsigned int a;
-	int j;
-	int d = 0;
+	int d = 1;
+	unsigned int x = n;
+	unsigned int y = n;
+	int c = 0;
 
+	if (n == 0)
+	{
+		_putchar('0');
+	}
 	if (n < 0)
 	{
 		_putchar('-');
+		n = n + 1;
 		n = -n;
+		y = n;
+		x = n;
+		x += 1;
+		y += 1;
 	}
-	a = n;
-	do {
-		a /= 10;
-		++d;
-	} while (a != 0);
 
-	while (d > 0)
+	while (x != 0)
 	{
-		j = d - 1;
-		i = 1;
-		while (j > 0)
-		{
-			i *= 10;
-			j--;
-		}
-		_putchar((n / i) + '0');
-		n = n - ((n / i) * i);
-		d--;
+		x = x / 10;
+		c++;
+	}
+	for (i = 1; i < c; i++)
+	{
+		d *= 10;
+	}
+	for (i = 0; i < c; i++)
+	{
+		_putchar(y / d + '0');
+		y = y % d;
+		d = d / 10;
 	}
 }
