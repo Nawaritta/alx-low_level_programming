@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 /**
  * print_last_digit - prints last digit
  * @i: integer to treat
