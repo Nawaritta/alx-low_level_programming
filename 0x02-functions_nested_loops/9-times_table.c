@@ -18,14 +18,14 @@ void times_table(void)
 		{
 			k = i * j;
 			if (k > 9)
-				print_last_digit(k/10);
+				print_last_digit(k / 10);
 			print_last_digit(k);
 			if (j < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 				if (i * (j + 1) <= 9)
-				  _putchar(' ');
+					_putchar(' ');
 			}
 		}
 		_putchar('\n');
