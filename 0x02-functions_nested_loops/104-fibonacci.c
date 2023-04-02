@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	unsigned long long fn_2 = 0;
-	unsigned long long fn_1 = 1;
-	unsigned long long fn;
+	long long fn_2 = 0;
+	long long fn_1 = 1;
+	long long fn;
 	int i = 0;
 	int j = 1;
 
