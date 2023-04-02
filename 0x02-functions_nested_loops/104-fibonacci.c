@@ -22,9 +22,9 @@ int main(void)
 			i++;
 		}
 		if (j != 98)
-			printf("%0f, ", fn);
+			printf("%.0f, ", fn);
 		else
-			printf("%0f\n", fn);
+			printf("%.0f\n", fn);
 	}
 	return (0);
 }
