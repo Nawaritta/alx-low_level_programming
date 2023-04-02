@@ -6,7 +6,7 @@
  */
 int print_last_digit(int i)
 {
-	unsigned j;
+	unsigned int j;
 
 	if (i < 0)
 		i *= -1;
