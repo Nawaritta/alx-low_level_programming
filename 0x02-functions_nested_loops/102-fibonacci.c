@@ -6,9 +6,9 @@
  */
  int main(void)
  {
- 	int fn_2 = 0;
- 	int fn_1 = 1;
- 	int fn;
+ 	unsigned long fn_2 = 0;
+ 	unsigned long fn_1 = 1;
+ 	unsigned long fn;
 	int i = 0;
 	int j = 1;
 
@@ -22,9 +22,9 @@
 			i++;
 		}
 		if (j != 50)
-			printf("%d, ", fn);
+			printf("%ld, ", fn);
 		else
-			printf("%d\n", fn);
+			printf("%ld\n", fn);
 	}
  	return (0);
  }
