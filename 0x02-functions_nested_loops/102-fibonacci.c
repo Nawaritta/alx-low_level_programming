@@ -2,13 +2,13 @@
 /**
  *main - entry point
  *
- *return: always zero
+ *Return: always zero
  */
- int main(void)
- {
- 	unsigned long fn_2 = 0;
- 	unsigned long fn_1 = 1;
- 	unsigned long fn;
+int main(void)
+{
+	unsigned long fn_2 = 0;
+	unsigned long fn_1 = 1;
+	unsigned long fn;
 	int i = 0;
 	int j = 1;
 
@@ -26,5 +26,5 @@
 		else
 			printf("%ld\n", fn);
 	}
- 	return (0);
- }
+	return (0);
+}
