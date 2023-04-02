@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 /**
  * print_last_digit - prints last digit
  * @i: integer to treat
@@ -6,9 +7,11 @@
  */
 int print_last_digit(int i)
 {
+	unsigned j;
+
 	if (i < 0)
 		i *= -1;
-
-	_putchar('0' + i % 10);
-	return (i % 10);
+	j = i;
+	_putchar('0' + j % 10);
+	return (j % 10);
 }
