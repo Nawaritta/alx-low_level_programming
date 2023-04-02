@@ -4,19 +4,27 @@
  *
  *return: always zero
  */
-int main(void)
-{
-	int fn_1 = 0;
-	int fn_2 = 1;
-	int fn = fn_1 + fn_2;
-	int i = 2;
-	int Fib;
+ int main(void)
+ {
+ 	int fn_2 = 0;
+ 	int fn_1 = 1;
+ 	int fn;
+	int i = 0;
+	int j = 1;
 
-	while (i < 50)
+	for (; j <= 50; j++)
 	{
-		fn = fn_2
-			fn+ = fn_1;
+		while (i < j)
+		{
+			fn = fn_1 + fn_2;
+			fn_2 = fn_1;
+			fn_1 = fn;
+			i++;
+		}
+		if (j != 50)
+			printf("%d, ", fn);
+		else
+			printf("%d\n", fn);
 	}
-	printf("%d\n", Fib);
-	return (0);
-}
+ 	return (0);
+ }
