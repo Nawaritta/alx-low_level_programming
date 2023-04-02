@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	unsigned int fn_2 = 0;
-	unsigned int fn_1 = 1;
-	unsigned int fn;
+	float fn_2 = 0;
+	float fn_1 = 1;
+	float fn;
 	int i = 0;
 	int j = 1;
 
@@ -22,9 +22,9 @@ int main(void)
 			i++;
 		}
 		if (j != 98)
-			printf("%u, ", fn);
+			printf("%f, ", fn);
 		else
-			printf("%u\n", fn);
+			printf("%f\n", fn);
 	}
 	return (0);
 }
