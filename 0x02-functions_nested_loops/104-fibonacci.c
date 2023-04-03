@@ -6,25 +6,25 @@
  */
 int main(void)
 {
-	float fn_2 = 0;
-	float fn_1 = 1;
-	float fn;
-	int i = 0;
-	int j = 1;
+	float fn_2 = 1;
+	float fn_1 = 2;
+	float fn = fn_1 + fn_2;
+       	int j = 3;
 
-	for (; j <= 98; j++)
+	printf("%.0f, %.0f, ", fn_2,fn_1);
+
+	while (j <= 98)
 	{
-		while (i < j)
-		{
-			fn = fn_1 + fn_2;
-			fn_2 = fn_1;
-			fn_1 = fn;
-			i++;
-		}
 		if (j != 98)
 			printf("%.0f, ", fn);
 		else
 			printf("%.0f\n", fn);
+
+		fn_2 = fn_1;
+		fn_1 = fn;
+		fn = fn_1 + fn_2;
+
+		j++;
 	}
 	return (0);
 }
