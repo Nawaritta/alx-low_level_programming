@@ -1,17 +1,20 @@
 #include "main.h"
-#include "2-strlen.c"
+
 /**
  *rev_string - reverses a string
  *@s: string to revers
  */
 void rev_string(char *s)
 {
-	int len;
+	int len = 0;
 	int i;
 	int n;
 	char stemp;
 
-	len = _strlen(s);
+	while (s[len] != '\0')
+	{
+		++len;
+	}
 	if (len % 2)
 		n = len / 2;
 	else
