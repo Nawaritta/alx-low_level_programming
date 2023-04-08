@@ -17,7 +17,7 @@ int _atoi(char *s)
 
 	len = _strlen(s);
 
-	for (i = len -1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
 		if (s[i] < '9' && s[i] > '0')
 		{
@@ -29,7 +29,7 @@ int _atoi(char *s)
 		if (s[i] == '-')
 			sgn--;
 	}
-	if (sgn < 0 && (- sgn) % 2 != 0)
+	if (sgn < 0 && (-sgn) % 2 != 0)
 		nb *= -1;
 
 	return (nb);
