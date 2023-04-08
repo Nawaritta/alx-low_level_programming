@@ -1,5 +1,5 @@
 #include "main.h"
-#include "2-strlen.c"
+#include "5-rev_string.c"
 
 /**
  *_atoi - converts a string to an integer
@@ -13,11 +13,10 @@ int _atoi(char *s)
 	int nb = 0;
 	int k = 1;
 	int sgn = 0;
-	int len;
 
-	len = _strlen(s);
+	rev_string(s);
 
-	for (i = len -1; i >= 0; i--)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] < '9' && s[i] > '0')
 		{
