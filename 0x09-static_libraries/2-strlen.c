@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *_strlen - string length
  *@s: string type pointer

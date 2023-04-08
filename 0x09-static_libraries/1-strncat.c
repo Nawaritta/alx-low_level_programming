@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *_strncat - string concatenation 2
  *@dest: first string
