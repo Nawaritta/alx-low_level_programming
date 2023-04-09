@@ -21,9 +21,11 @@ int main(int argc, char *argv[])
 		{
 
 			k = atoi(argv[i]);
-			if (k > 0)
-				sum += k;
-			else
+			if (k != 0 || *argv[i] == '0')
+			{
+				if (k > 0)
+					sum += k;
+			} else
 			{
 				printf("Error\n");
 				return (1);
