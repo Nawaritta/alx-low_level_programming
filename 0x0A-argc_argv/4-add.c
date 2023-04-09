@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
 /**
  *main - adds two numbers
  *@argc: The number of command line arguments
@@ -11,6 +13,8 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int k;
 	int sum = 0;
+	int j;
+
 
 	if (argc < 3)
 		printf("0\n");
@@ -19,17 +23,24 @@ int main(int argc, char *argv[])
 	{
 		for (; i < argc; i++)
 		{
+			if (argv[i][0] == '-')
+				j = 1;
+			else
+				j = 0;
+
+			for (; argv[i][j] != '\0'; j++)
+			{
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return 1;
+				}
+			}
 
 			k = atoi(argv[i]);
-			if (k != 0 || *argv[i] == '0')
-			{
-				if (k > 0)
-					sum += k;
-			} else
-			{
-				printf("Error\n");
-				return (1);
-			}
+
+			if (k > 0)
+				sum += k;
 		}
 		printf("%d\n", sum);
 	}
