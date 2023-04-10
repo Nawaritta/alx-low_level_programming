@@ -25,9 +25,10 @@ int main(int argc, char *argv[])
 	if (cents < 0)
 		printf("0\n");
 
-	else {
+	else
+	{
 		i = 0;
-		k =0;
+		k = 0;
 
 		while (cents > 0 && i < 5)
 		{
