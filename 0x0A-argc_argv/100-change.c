@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 		while (cents > 0 && i < 5)
 		{
-			while (cents % coin[i] == 0)
+			while (cents >= coin[i])
 			{
 				cents -= coin[i];
 				k++;
