@@ -6,4 +6,10 @@
 int is_prime_number(int n)
 {
 	int i = 2;
-       ;
+	if (n > 3)
+	{
+		if (n % i)return(0)
+			%is_prime_number(int n)
+		n=
+	}
+	return (1);

@@ -1,16 +1,24 @@
+#include "2-strlen_recursion.c"
 /**
  *is_palindrome - checks if a number is palindrome
  *@s: to check
  */
 int is_palindrome(char *s)
 {
-	int i = 0;
+	int len = _strlen_recursion(s);
+	int k;
 
-	if (s*)
+	if (len % 2)
+		k = len / 2;
+	else
+		k = (len + 1) / 2;
+
+	if (*s && s != &s[k])
 	{
-		if (s[i] == s[len-i-1])
-			_is_palindrome(++s);
-		return (1);
+		if (*s != s[--len])
+			return (0);
+		else
+			is_palindrome(++s);
 	}
 	return (1);
 }

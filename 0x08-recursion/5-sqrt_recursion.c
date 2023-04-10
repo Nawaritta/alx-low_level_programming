@@ -5,17 +5,19 @@
  *@n: number
  *Return: square root or -1
  */
-int _sqrt_recursion(int n)
+int helper(int n, int sq)
 {
-	int sq = 0;
-
-	while(sq <= n)
+	if (sq <= n)
 	{
 		if (_pow_recursion(sq, 2) != n)
-			sq++;
+			return (helper(n,sq+1));
 		else
 			return (sq);
 	}
 
 	return (-1);
+}
+int _sqrt_recursion(int n)
+{
+	return (helper(n, 0));
 }
