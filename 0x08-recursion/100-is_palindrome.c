@@ -3,22 +3,26 @@
  *is_palindrome - checks if a number is palindrome
  *@s: to check
  */
+int hel_per(char *s, char *a)
+{
+	if (*s == *a)
+	{
+		if (&s == &a)
+		{
+			return (1);
+		}
+		return (hel_per(++s,--a));
+	}
+	return (0);
+}
+
 int is_palindrome(char *s)
 {
 	int len = _strlen_recursion(s);
-	int k;
+	char *a = &s[len - 1];
 
-	if (len % 2)
-		k = len / 2;
-	else
-		k = (len + 1) / 2;
+	if (*s == '\0')
+		return (1);
 
-	if (*s && s != &s[k])
-	{
-		if (*s != s[--len])
-			return (0);
-		else
-			is_palindrome(++s);
-	}
-	return (1);
+	return (hel_per(s,a));
 }
