@@ -20,9 +20,12 @@ char *_strdup(char *str)
 
 	cpy = malloc(sizeof(char) * i);
 
+	if (cpy == NULL)
+		return (NULL);
+
 	while (i)
 	{
-		cpy[i-1] = str[i-1];
+		cpy[i - 1] = str[i - 1];
 		i--;
 	}
 	return (cpy);
