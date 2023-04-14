@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 /**
@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 {
 	int i = 1;
 	int j = 2;
-	int k, ln1, ln2;
+	unsigned int k, ln1, ln2;
 	int status = 98;
-	int mul;
+	int *mul;
 
 	if (argc != 3)
 	{
@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 	ln1 = strlen(argv[i]);
 	ln2 = strlen(argv[j]);
 	k = ln1 - 1;
+
+	mul = (int *)malloc(ln1 * ln2);
 
 	if (ln2 > k)
 		k = ln2 - 1;
@@ -40,11 +42,10 @@ int main(int argc, char *argv[])
 	}
 
 
+	*mul = atoi(argv[j]) * atoi(argv[i]);
 
-
-	mul = atoi(argv[j]) * atoi(argv[i]);
-	printf("%d", mul);
-	_putchar('\n');
+	printf("%d\n", *mul);
+	free(mul);
 
 	return (0);
 }
