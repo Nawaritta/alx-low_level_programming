@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,7 +43,8 @@ int main(int argc, char *argv[])
 
 
 	mul = atoi(argv[j]) * atoi(argv[i]);
-	printf("%d\n", mul);
+	printf("%d", mul);
+	_putchar('\n');
 
 	return (0);
 }
