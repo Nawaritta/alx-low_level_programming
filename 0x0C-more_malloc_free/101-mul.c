@@ -6,9 +6,7 @@
  *multiply - multiplies two numbers
  *@num1: pointer to the first number
  *@num2: pointer to the second number
- *
-*/
-
+ */
 void multiply(char *num1, char *num2)
 {
 	int len1 = strlen(num1);
@@ -96,7 +94,8 @@ int main(int argc, char *argv[])
 		n2[i] = argv[2][i];
 		i++;
 	}
-
 	multiply(n1, n2);
+	free(n1);
+	free(n2);
 	return (0);
 }
