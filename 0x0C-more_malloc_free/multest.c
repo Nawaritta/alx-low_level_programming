@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 /**
- *multiply - multiplies two numbers
+ *mul - multiplies two numbers
  *@num1: pointer to the first number
  *@num2: pointer to the second number
  *
@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
 {
 	unsigned int i;
 	int status = 98;
+
 	char *n1 =  malloc(sizeof(char) * strlen(argv[1]) + 1);
 	char *n2 =  malloc(sizeof(char) * strlen(argv[2]) + 1);
 
@@ -75,6 +76,7 @@ int main(int argc, char *argv[])
 	}
 
 	i = 0;
+
 	while (i < strlen(argv[1]))
 	{
 		if (!isdigit(argv[1][i]))
@@ -85,7 +87,9 @@ int main(int argc, char *argv[])
 		n1[i] = argv[1][i];
 		i++;
 	}
+
 	i = 0;
+
 	while (argv[2][i] != '\0')
 	{
 		if (!isdigit(argv[2][i]))
@@ -98,5 +102,5 @@ int main(int argc, char *argv[])
 	}
 
 	multiply(n1, n2);
-	return (0);
+       	return (0);
 }
