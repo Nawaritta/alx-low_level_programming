@@ -32,7 +32,7 @@ void multiply(char *num1, char *num2)
 		mul[i] += carry;
 	}
 
-	for (i = 0; i < len1 + len2 -1; i++)
+	for (i = 0; i < len1 + len2 - 1; i++)
 	{
 		if (mul[i] != 0)
 			break;
