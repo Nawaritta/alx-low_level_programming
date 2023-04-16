@@ -37,13 +37,12 @@ void multiply(char *num1, char *num2)
 		if (mul[i] != 0)
 			break;
 	}
-
 	k = 0;
+
 	for (; i < len1 + len2; i++)
 		mul[k++] = mul[i];
 
 	mul[k] = '\0';
-
 	for (i = 0; i < k; i++)
 		printf("%d", mul[i]);
 
@@ -58,21 +57,21 @@ void multiply(char *num1, char *num2)
 */
 int main(int argc, char *argv[])
 {
-	unsigned int i;
+	unsigned int i = 0;
 	int status = 98;
-	char *n1 =  malloc(sizeof(char) * strlen(argv[1]) + 1);
-	char *n2 =  malloc(sizeof(char) * strlen(argv[2]) + 1);
-
-	if (n1 == NULL || n2 == NULL)
-		exit(status);
+	char *n1 = NULL;
+	char *n2 = NULL;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(status);
 	}
+	n1 =  malloc(sizeof(char) * strlen(argv[1]));
+	n2 =  malloc(sizeof(char) * strlen(argv[2]));
+	if (n1 == NULL || n2 == NULL)
+		exit(status);
 
-	i = 0;
 	while (i < strlen(argv[1]))
 	{
 		if (!isdigit(argv[1][i]))

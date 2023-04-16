@@ -1,3 +1,4 @@
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -50,14 +51,43 @@ void multiply(char *num1, char *num2)
 	free(mul);
 }
 /**
+ *_isdigit - checks if all the elements of an array are digits
+ *@c: pointer to a pointer
+ *@k: defines the array to check
+ *@cv: valid char pointer
+ *Return: pointer to a valid digits array
+ */
+char *_isdigit(char **c, int k, char *cv)
+{
+	unsigned int i = 0;
+	int status = 98;
+
+
+	cv =  malloc(sizeof(char) * strlen(c[k]));
+
+	if (cv == NULL)
+		exit(status);
+
+	while (i < strlen(c[k]))
+	{
+		if (!isdigit(c[k][i]))
+		{
+			printf("Error\n");
+			exit(status);
+		}
+		cv[i] = c[k][i];
+		i++;
+	}
+	return (cv);
+}
+/**
 *main - entry point
 *@argc: The number of command line arguments
 *@argv: An array containing the program command line arguments
 *Return: zero
 */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	unsigned int i = 0;
 	int status = 98;
 	char *n1 = NULL;
 	char *n2 = NULL;
@@ -67,33 +97,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(status);
 	}
-	n1 =  malloc(sizeof(char) * strlen(argv[1]));
-	n2 =  malloc(sizeof(char) * strlen(argv[2]));
-	if (n1 == NULL || n2 == NULL)
-		exit(status);
 
-	while (i < strlen(argv[1]))
-	{
-		if (!isdigit(argv[1][i]))
-		{
-			printf("Error\n");
-			exit(status);
-		}
-		n1[i] = argv[1][i];
-		i++;
-	}
-	i = 0;
-	while (argv[2][i] != '\0')
-	{
-		if (!isdigit(argv[2][i]))
-		{
-			printf("Error\n");
-			exit(status);
-		}
-		n2[i] = argv[2][i];
-		i++;
-	}
-	multiply(n1, n2);
+	multiply(_isdigit(argv, 1, n1), _isdigit(argv, 2, n2));
 	free(n1);
 	free(n2);
 	return (0);
