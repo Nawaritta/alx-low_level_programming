@@ -12,7 +12,7 @@ void multiply(char *num1, char *num2)
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
 	int i, j, k, carry;
-	int *mul = (int *)malloc(sizeof(int) * (len1 + len2));
+	int *mul = (int *)malloc(sizeof(int) * (len1 + len2 + 1));
 
 	if (mul == NULL)
 		exit(98);

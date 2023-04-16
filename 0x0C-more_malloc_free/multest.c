@@ -3,12 +3,10 @@
 #include <string.h>
 #include <ctype.h>
 /**
- *mul - multiplies two numbers
+ *multiply - multiplies two numbers
  *@num1: pointer to the first number
  *@num2: pointer to the second number
- *
-*/
-
+ */
 void multiply(char *num1, char *num2)
 {
 	int len1 = strlen(num1);
@@ -34,7 +32,7 @@ void multiply(char *num1, char *num2)
 		mul[i] += carry;
 	}
 
-	for (i = 0; i < len1 + len2; i++)
+	for (i = 0; i < len1 + len2 - 1; i++)
 	{
 		if (mul[i] != 0)
 			break;
@@ -62,7 +60,6 @@ int main(int argc, char *argv[])
 {
 	unsigned int i;
 	int status = 98;
-
 	char *n1 =  malloc(sizeof(char) * strlen(argv[1]) + 1);
 	char *n2 =  malloc(sizeof(char) * strlen(argv[2]) + 1);
 
@@ -76,7 +73,6 @@ int main(int argc, char *argv[])
 	}
 
 	i = 0;
-
 	while (i < strlen(argv[1]))
 	{
 		if (!isdigit(argv[1][i]))
@@ -87,9 +83,7 @@ int main(int argc, char *argv[])
 		n1[i] = argv[1][i];
 		i++;
 	}
-
 	i = 0;
-
 	while (argv[2][i] != '\0')
 	{
 		if (!isdigit(argv[2][i]))
@@ -100,7 +94,8 @@ int main(int argc, char *argv[])
 		n2[i] = argv[2][i];
 		i++;
 	}
-
 	multiply(n1, n2);
-       	return (0);
+	free(n1);
+	free(n2);
+	return (0);
 }
