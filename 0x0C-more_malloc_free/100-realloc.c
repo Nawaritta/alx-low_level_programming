@@ -26,10 +26,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (old_size >= new_size)
 	{
+		new_ptr = ptr;
 		memset((int *)ptr + new_size, 0, (old_size - new_size + 1) * sizeof(int));
-		return (ptr);
-	} else
-		memcpy(new_ptr, ptr, old_size);
+		return (new_ptr);
+	}
+
+	memcpy(new_ptr, ptr, old_size);
 
 	free(ptr);
 	return (new_ptr);
