@@ -33,7 +33,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		new_ptr = ptr;
 
-		memset((char *)ptr + new_size, 0, old_size - new_size);
+		memset((unsigned int*)ptr + new_size, 0, old_size - new_size);
 	}
 
 	return (new_ptr);
