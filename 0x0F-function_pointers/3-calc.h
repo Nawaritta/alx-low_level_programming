@@ -8,4 +8,14 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
+/**
+ * struct op - Struct op
+  * @op: The operator
+ * @fct: The associated function
+ */
+typedef struct
+{
+	char *op;
+	int (*fct)(int, int);
+} op_t;
 #endif
