@@ -9,11 +9,11 @@ int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
 /**
- * struct op - Struct op
-  * @op: The operator
+ * struct op - Structure operation
+ * @op: The operator
  * @fct: The associated function
  */
-typedef struct
+typedef struct op
 {
 	char *op;
 	int (*fct)(int, int);
