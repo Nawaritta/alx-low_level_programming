@@ -4,8 +4,9 @@
 #include <stdio.h>
 /**
  * main - entry point
- *
- *
+ *@argc: number of arguments
+ *@argv: arguments passed to the program
+ *Return: zero
  */
 int main(int argc, char **argv)
 {
@@ -20,17 +21,17 @@ int main(int argc, char **argv)
 	}
 
 	op = (*get_op_func)(argv[2]);
-/**
-	if ((op == op_div || op == op_mod) && argv[3] == 0)
+
+	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
-*/
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	result = op(a, b);
-	printf("%d\n",result);
+	printf("%d\n", result);
 
-	return (result);
+	return (0);
 }
