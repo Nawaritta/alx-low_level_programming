@@ -41,10 +41,10 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- * op_mod - devides two int and returns th reminder
+ * op_mod - devides two int and returns th remainder
  * @a: int a
  * @b: int b
- * Return: reminder of a division
+ * Return: remainder of a division
 */
 int op_mod(int a, int b)
 {
