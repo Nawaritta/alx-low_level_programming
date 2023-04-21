@@ -45,8 +45,7 @@ int op_div(int a, int b)
  * @a: int a
  * @b: int b
  * Return: reminder of a division
- */
-
+*/
 int op_mod(int a, int b)
 {
 	return (a % b);
