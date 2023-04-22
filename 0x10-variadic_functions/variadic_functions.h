@@ -11,7 +11,7 @@ int print_i(va_list a);
 int print_f(va_list a);
 int print_s(va_list a);
 /**
- * struct print - structure type
+ * struct type - structure type
  * @c: data type
  * @f: corresponding function
  */
