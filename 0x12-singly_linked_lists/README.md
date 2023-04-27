@@ -1,9 +1,9 @@
-#0x12. C - Singly linked lists
+# 0x12. C - Singly linked lists
 
-##General
+## General
 
-When and why using linked lists vs arrays
-How to build and use linked lists
+* When and why using linked lists vs arrays
+* How to build and use linked lists
 
 
 ## Mandatories tasks:
