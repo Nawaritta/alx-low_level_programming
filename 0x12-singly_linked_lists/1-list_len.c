@@ -1,18 +1,19 @@
 #include "lists.h"
 
 /**
- * print_list - prints a linked list
- * @h: pointer to the head
- * Return: number of nodes
+ * list_len - computes the number of elements in a linked
+ * @h: pointer to the head node
+ * Return: number of elements
  */
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
-	int node = 0;
+	int nbr = 0;
 
 	while (h != NULL)
 	{
-		node++;
+		nbr++;
 		h = h->next;
 	}
-	return (node);
+
+	return (nbr);
 }
