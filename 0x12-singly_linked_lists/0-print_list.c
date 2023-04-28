@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * print_list - prints all the elements of a linked list
  * @h: pointer to the head
@@ -10,14 +10,14 @@ size_t print_list(const list_t *h)
 
       	while(h != NULL)
 	{
-		if (h.str == NULL)
-			printf("[0] (nil)");
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
 		else
 		{
-			printf("[%d] %s\n", h.len, h.str);
+			printf("[%d] %s\n", h->len, h->str);
 		}
 		node++;
-		h = str.next;
+		h = h->next;
        	}
 	return (node);
 }

@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * add_node - adds a node to the beginning of a list
@@ -13,10 +13,10 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 
-	new.str = strdup(str);
-	new.len = strlen(str);
-	new.next = &head;
+	new->str = strdup(str);
+	new->len = strlen(str);
+	new->next = *head;
 
 	print_list(new);
-	return (*new);
+	return (new);
 }
