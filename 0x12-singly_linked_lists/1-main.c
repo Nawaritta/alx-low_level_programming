@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * main - check the code
  *
