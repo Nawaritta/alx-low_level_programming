@@ -4,7 +4,7 @@
 ## Low-level programming & Algorithm - Hatching out
 
 
-### 0x00-hello_world
+#### 0x00-hello_world
 
 ### 0x01-variables_if_else_while
 
@@ -37,6 +37,7 @@
 ### 0x0F-function_pointers
 
 ### 0x10-variadic_functions
+
 
 
 ## Low-level programming & Algorithm - Data structures and Algorithms
