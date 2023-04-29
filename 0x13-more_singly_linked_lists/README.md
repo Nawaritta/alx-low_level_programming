@@ -8,7 +8,7 @@
 
 ## More Info
   
-  Data structure used for this project:
+  The data structure used for this project:
   
     /**
     *struct listint_s - singly linked list
@@ -16,13 +16,11 @@
     *@next: points to the next node
     *Description: singly linked list node structure
     */
-typedef struct listint_s
-{
-    int n;
-    
-    struct listint_s *next;
-    
-} listint_t;
+    typedef struct listint_s
+    {
+      int n;    
+      struct listint_s *next;    
+    } listint_t;
 
 
 ## Mandatories tasks:
