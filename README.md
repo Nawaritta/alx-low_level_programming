@@ -1,5 +1,4 @@
-# Low level programming languages repository
-
+# Low-level programming & Algorithm
 
 
 ## Low-level programming & Algorithm - Hatching out
@@ -38,6 +37,10 @@
 ### 0x0F-function_pointers
 
 ### 0x10-variadic_functions
+
+
+## Low-level programming & Algorithm - Data structures and Algorithms
+
 
 ### 0x12-singly_linked_lists
 
