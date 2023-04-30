@@ -3,6 +3,7 @@
 /**
  * pop_listint - frees a linked list
  * @head: pointer to pointer to the head node
+ * Return: the head node’s data (n).
  */
 
 int pop_listint(listint_t **head)
