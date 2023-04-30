@@ -5,6 +5,7 @@
  * insert_nodeint_at_index - inserts a node at a given position
  * @head: pointer to the head node
  * @idx: The index at which to insert a node
+ * @n: the value of data(n) of the inserted element
  * Return: The node at a given index
  */
 
