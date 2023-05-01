@@ -1,6 +1,6 @@
 #include "lists.h"
 #include "7-get_nodeint.c"
-
+#include "1-listint_len.c"
 /**
  * insert_nodeint_at_index - inserts a node at a given position
  * @head: pointer to the head node
@@ -14,7 +14,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *prev_node;
 	listint_t *insert_node;
 
-	if (head == NULL)
+
+	if (head == NULL || idx > listint_len(*head))
 		return (NULL);
 
 	insert_node = malloc(sizeof(listint_t));
@@ -31,6 +32,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	} else
 	{
 		prev_node = get_nodeint_at_index(*head, idx - 1);
+
+		if (prev_node == NULL)
+		{
+			free(insert_node);
+			return (NULL);
+		}
+
 		insert_node->next = prev_node->next;
 		prev_node->next = insert_node;
 	}
