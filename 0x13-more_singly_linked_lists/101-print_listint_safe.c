@@ -9,16 +9,39 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t node = 0;
-	const listint_t *repeted = head;
+	const listint_t *ind;
 
-	while (head != NULL)
+	if (head == NULL)
+		exit(98);
+
+	ind = head;
+
+	while (ind != NULL)
 	{
-		printf("%d\n", head->n);
-		head = head->next;
+		printf("[%p] %d\n", (void *)ind, ind->n);
 		node++;
 
-		if (head == repeted)
+		if (ind->next < head)
+		{
+			printf("-> [%p] %d\n", (void *)ind->next, (ind->next)->n);
 			exit(98);
+		}
+
+		ind = ind->next;
 	}
 	return (node);
+}
+/**
+ *loop_check - check if there is a loop
+ * @head: pointer to the head node
+ * Return: number of nodes
+ */
+
+size_t *loop_check(listint_t *head)
+{
+
+	while ()
+	{
+	}
+	return (NULL);
 }

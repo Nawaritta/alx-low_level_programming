@@ -1,5 +1,5 @@
 #include "lists.h"
-#include "1-listint_len.c"
+
 /**
  * main - check the code
  *
@@ -30,5 +30,6 @@ int main(void)
 	node->next = add_nodeint(&head, 98);
 	add_nodeint(&head, 402);
 	add_nodeint(&head, 1024);
+	print_listint_safe(head);
 	return (0);
 }
