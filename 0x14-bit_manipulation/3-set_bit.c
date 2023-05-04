@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "2-get_bit.c"
 /**
  * set_bit - sets the value of a bit to 1
  * @n: unsigned long int
