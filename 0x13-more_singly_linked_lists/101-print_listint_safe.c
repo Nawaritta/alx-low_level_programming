@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <limits.h>
 /**
  * loop_check - check if there is a loop in a linked list
  * @head: pointer to the head node
@@ -6,7 +7,7 @@
  */
 size_t loop_check(const listint_t *head)
 {
-	const listint_t *address[200000];
+	const listint_t *address[UINT_MAX];
 	size_t i, len = 0;
 	const listint_t *temp = head;
 
