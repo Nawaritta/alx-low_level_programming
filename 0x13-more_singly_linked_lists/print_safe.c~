@@ -48,8 +48,10 @@ size_t print_listint_safe(const listint_t *head)
 		node--;
 		ind = ind->next;
 	}
+/**
+	if (loop_check(head) > node)
+		printf("Loop detected\n");
 
-	if (ind != NULL)
-		printf("-> [%p] %d\n", (void *)ind, ind->n);
+*/
 	return (node);
 }
