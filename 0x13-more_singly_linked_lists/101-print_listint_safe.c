@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <limits.h>
 /**
  * loop_check - check if there is a loop in a linked list
  * @head: pointer to the head node
@@ -6,7 +7,7 @@
  */
 size_t loop_check(const listint_t *head)
 {
-	const listint_t *address[20000];
+	const listint_t *address[UINT_MAX];
 	size_t len = 0;
 	size_t i;
 	const listint_t *temp = head;
@@ -51,5 +52,5 @@ size_t print_listint_safe(const listint_t *head)
 
 	if (ind != NULL)
 		printf("-> [%p] %d\n", (void *)ind, ind->n);
-	return (node);
+	return (loop_check(head));
 }
