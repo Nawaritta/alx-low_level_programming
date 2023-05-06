@@ -14,7 +14,7 @@ size_t free_listint_safe(listint_t **h)
 	if (h == NULL || *h == NULL)
 		return (count);
 
-	node = print_listint_safe(*h);
+	node = loop_check(*h);
 
 	current = *h;
 	while (count < node)
