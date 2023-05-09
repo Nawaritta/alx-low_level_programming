@@ -7,14 +7,14 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd_from, fd_to, readc, writtenc;
+	int fd_from, fd_to, readc, writtenc, ;
 	char buffer[BUFF_SIZE];
 
 	if (argc != 3)
 	{
 		dprintf(2, "Usage: file_from file_to\n");
 		exit(97); }
-	fd_from = open(argv[1], 0664);
+	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	while ((readc = read(fd_from, buffer, BUFF_SIZE)) > 0)
 	{
 		writtenc = write(fd_to, buffer, readc);
-		if (writtenc != readc)
+		if (writtenc == -1 || writtenc != readc)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99); }
