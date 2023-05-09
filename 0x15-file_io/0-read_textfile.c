@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints to stdout.
  * @filename: file to read
  * @letters: number of bytes to read
  * Return: number of printed letters
