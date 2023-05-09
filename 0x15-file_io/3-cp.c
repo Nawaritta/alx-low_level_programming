@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, readc, writtenc;
-	char c, buffer[BUFF_SIZE];
+	char buffer[BUFF_SIZE];
 
 	if (argc != 3)
 	{
