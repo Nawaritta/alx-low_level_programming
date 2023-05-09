@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	while ((readc = read(fd_from, buffer, BUFF_SIZE)) > 0)
 	{
 		writtenc = write(fd_to, buffer, readc);
-		if (writtenc == -1c)
+		if (writtenc == -1)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99); }
