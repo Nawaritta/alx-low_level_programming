@@ -1,6 +1,7 @@
 #include "lists.h"
+#include "5-get_dnodeint.c"
 /**
- * insert_dnodeint_at_index - deleted a node at given index
+ * delete_dnodeint_at_index - deletes a node at given index
  *@head: double pointer the head
  *@index: the position of th node to be deleted
  *Return: 1 if it succeeded, -1 if it failed
