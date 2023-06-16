@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "1-dlistint_len.c"
 #include "5-get_dnodeint.c"
 
 /**
@@ -12,7 +13,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *previous, *inserted = NULL;
 
-	if (dlistint_len(*head) <= idx)
+	if (dlistint_len(*h) <= idx)
 		return (NULL);
 
 	if (idx != 0)
