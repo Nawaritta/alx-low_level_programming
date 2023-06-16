@@ -10,9 +10,9 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *previous, inserted = NULL;
+	dlistint_t *previous, *inserted = NULL;
 
-	previous = get_dnodeint_at_index(h, idx - 1);
+	previous = get_dnodeint_at_index(*h, idx - 1);
 
 	if (previous == NULL)
 		return (NULL);
