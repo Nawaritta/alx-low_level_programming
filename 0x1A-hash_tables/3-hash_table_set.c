@@ -1,5 +1,14 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - adds and updates values of a hash table
+ * @ht: pointer to the hash table.
+ * @key: The key to add
+ * @value: The value associated with key to add or updaate.
+ *
+ * Return: 0 if succeeded or otherwise - 1 if failed.
+ */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_hn;
@@ -13,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[i] != NULL && strcmp(ht->array[i]->key, key) == 0)
 	{
 		ht->array[i]->value = strdup(value);
-	       	return (1);
+		return (1);
 	}
 
 

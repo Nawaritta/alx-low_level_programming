@@ -1,5 +1,8 @@
 #include "hash_tables.h"
-
+/**
+ * free_hash_node_t - frees a node in the hash table
+ *@current: the node to free
+ */
 void free_hash_node_t(hash_node_t *current)
 {
 	hash_node_t *tmp;
