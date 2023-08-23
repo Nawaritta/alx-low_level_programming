@@ -70,7 +70,7 @@ j#00000000000000000we]+]Q00000000000000
 j#0000000000000@@+wgdA]+J00000000000000
 j#0000000000000k?qwgdC=]4#0000000000000
 j#00000000000000w]+]++qw#00000000000000
-\"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 julien@ubuntu:~/0x1C. Makefiles$
 ```
 Repo:
@@ -85,10 +85,10 @@ Requirements:
 
  - name of the executable: school
  - rules: all
-  - The all rule builds your executable
+   - The all rule builds your executable
  - variables: CC, SRC
-  - CC: the compiler to be used
-  - SRC: the .c files
+   - CC: the compiler to be used
+   - SRC: the .c files
 ```
 julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
 gcc main.c school.c -o school
@@ -111,12 +111,12 @@ Requirements:
 
  - name of the executable: school
  - rules: all
-  - The all rule builds your executable
+   - The all rule builds your executable
  - variables: CC, SRC, OBJ, NAME
  - CC: the compiler to be used
-  - SRC: the .c files
-  - OBJ: the .o files
-  - NAME: the name of the executable
+   - SRC: the .c files
+   - OBJ: the .o files
+   - NAME: the name of the executable
  - The all rule should recompile only the updated source files
  - You are not allowed to have a list of all the .o files
 ```
@@ -135,9 +135,9 @@ julien@ubuntu:~/0x1C. Makefiles$
 
  Repo:
 
- ** GitHub repository: alx-low_level_programming
- ** Directory: 0x1C-makefiles
- ** File: 2-Makefile
+ - GitHub repository: alx-low_level_programming
+ - Directory: 0x1C-makefiles
+ - File: 2-Makefile
 
 
 3. make -f 3-Makefile
@@ -210,9 +210,9 @@ julien@ubuntu:~/0x1C. Makefiles$
 ```
 Repo:
 
- ** GitHub repository: alx-low_level_programming
- ** Directory: 0x1C-makefiles
- ** File: 3-Makefile
+ - GitHub repository: alx-low_level_programming
+ - Directory: 0x1C-makefiles
+ - File: 3-Makefile
 
 ### 4\. A complete Makefile
 mandatory
@@ -245,11 +245,11 @@ julien@ubuntu:~/0x1C. Makefiles$
 ```
 Repo:
 
- ** GitHub repository: alx-low_level_programming
- ** Directory: 0x1C-makefiles
- ** File: 4-Makefile
+ - GitHub repository: alx-low_level_programming
+ - Directory: 0x1C-makefiles
+ - File: 4-Makefile
 
-###5\. Island Perimeter
+### 5\. Island Perimeter
 mandatory
 Technical interview preparation:
 
@@ -295,13 +295,13 @@ guillaume@ubuntu:~/0x1C$
 ```
 Repo:
 
- ** GitHub repository: alx-low_level_programming
- ** Directory: 0x1C-makefiles
- ** File: 5-island_perimeter.py
+ - GitHub repository: alx-low_level_programming
+ - Directory: 0x1C-makefiles
+ - File: 5-island_perimeter.py
 
 
-###6\. make -f 100-Makefile
-\#advanced
+### 6\. make -f 100-Makefile
+advanced
 Requirements:
 
 name of the executable: school
@@ -332,6 +332,6 @@ Your Makefile should not compile if the header file m.h is missing
 
  Repo:
 
- ** GitHub repository: alx-low_level_programming
- ** Directory: 0x1C-makefiles
- ** File: 100-Makefile
+ - GitHub repository: alx-low_level_programming
+ - Directory: 0x1C-makefiles
+ - File: 100-Makefile
