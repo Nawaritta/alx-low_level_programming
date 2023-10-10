@@ -1,7 +1,7 @@
 #include "search_algos.h"
 /**
- * linear_search - searches for a value in an array of integers
-                    using the Linear search algorithm
+ * jump_search - searches for a value in an array of integers
+ *               using the Jump search algorithm
  * @array: A pointer to the first element of the array
  * @size: The array size
  * @value: The value to search for
@@ -18,17 +18,16 @@ int jump_search(int *array, size_t size, int value)
 
 	while (idx < size)
 	{
-		if ((array[idx + step] >= value || idx + step >= size)\
-		    && step != 1)
+		printf("Value checked array[%ld] = [%d]\n", idx, array[idx]);
+
+		if ((array[idx + step] >= value || idx + step >= size) && step != 1)
 		{
-			printf("Value found between indexes [%ld] and [%ld]\n",\
-			       idx, idx + step);
+			printf("Value found between indexes [%ld]", idx);
+			printf(" and [%ld]\n", idx + step);
 			step = 1;
 		}
 		if (array[idx] == value)
 			return (idx);
-		printf("Value checked array[%ld] = [%d]\n", idx, array[idx]);
-
 		idx += step;
 	}
 	return (-1);
