@@ -1,8 +1,8 @@
 #include "search_algos.h"
 
 /**
- * jump_search - searches for a value in an array of integers
- *               using the Jump search algorithm
+ * interpolation_search - searches for a value in an array of integers
+ *               using the  Interpolation search.
  * @array: A pointer to the first element of the array
  * @size: The array size
  * @value: The value to search for
@@ -10,7 +10,7 @@
  */
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t idx = 0, low, high;
+	size_t idx = 0, low, high, denom;
 
 	if (array == NULL || !value)
 		return (-1);
@@ -20,8 +20,9 @@ int interpolation_search(int *array, size_t size, int value)
 
 	while (low < high)
 	{
+		denom = array[high] - array[low];
 
-		idx = low + (((value - array[low])*(high - low))/(array[high] - array[low]));
+		idx = low + (((double)(high - low) / denom) * (value - array[low]));
 
 		printf("Value checked array [%ld] ", idx);
 
@@ -29,13 +30,13 @@ int interpolation_search(int *array, size_t size, int value)
 		{
 			printf("is out of range\n");
 			break;
-		} else
+		}
 
-			printf("= [%d]\n", array[idx]);
+		printf("= [%d]\n", array[idx]);
 
 		if (array[idx] > value)
 		{
-			low= idx + 1;
+			low = idx + 1;
 
 		} else
 		{
