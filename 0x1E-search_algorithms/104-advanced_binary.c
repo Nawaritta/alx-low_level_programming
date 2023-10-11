@@ -20,7 +20,7 @@ void print_array(int *array, size_t size)
 
 /**
  * recursive_binary - Recursively searches for a value in a sorted
-                      array of integers using the Binary search algorithm.
+ *                    array of integers using the Binary search algorithm.
  * @array: A pointer to the first element of the array.
  * @left: The left index of the search range.
  * @right: The right index of the search range.
@@ -30,26 +30,27 @@ void print_array(int *array, size_t size)
  */
 int recursive_binary(int *array, size_t left, size_t right, int value)
 {
-	if (left <= right)
+	size_t mid;
+
+	if (left > right)
+		return (-1);
+
+	mid = left + (right - left) / 2;
+
+	print_array(array + left, right - left + 1);
+
+	if (array[mid] == value)
 	{
-		size_t mid = left + (right - left) / 2;
-
-		print_array(array + left, right - left + 1);
-
-		if (array[mid] == value)
-		{
-			if (mid > 0 && array[mid - 1] == value)
-				return recursive_binary(array, left, mid - 1, value);
-			else
-				return mid;
-		}
-		if (array[mid] < value)
-			return recursive_binary(array, mid + 1, right, value);
-		if (array[mid] > value)
-			return recursive_binary(array, left, mid - 1, value);
+		if (mid > 0 && array[mid - 1] == value)
+			return (recursive_binary(array, left, mid - 1, value));
+		else
+			return (mid);
 	}
+	if (array[mid] < value)
+		return (recursive_binary(array, mid + 1, right, value));
 
-	return -1;
+	return (recursive_binary(array, left, mid - 1, value));
+
 }
 
 /**
@@ -64,7 +65,7 @@ int recursive_binary(int *array, size_t left, size_t right, int value)
 int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL || size == 0)
-		return -1;
+		return (-1);
 
 	return (recursive_binary(array, 0, size - 1, value));
 }
