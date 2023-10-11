@@ -6,13 +6,14 @@
  * @array: A pointer to the first element of the array
  * @size: The array size
  * @value: The value to search for
+ *
  * Return: The index
  */
 int interpolation_search(int *array, size_t size, int value)
 {
 	size_t idx = 0, low, high, denom;
 
-	if (array == NULL || !value)
+	if (array == NULL)
 		return (-1);
 
 	low = 0;
@@ -26,7 +27,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 		printf("Value checked array [%ld] ", idx);
 
-		if (idx >= size)
+		if (idx < 0 || idx >= size)
 		{
 			printf("is out of range\n");
 			break;
