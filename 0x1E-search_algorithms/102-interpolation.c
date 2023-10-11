@@ -11,7 +11,7 @@
  */
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t idx = 0, low, high, denom;
+	size_t  idx = 0, low, high, denom;
 
 	if (array == NULL)
 		return (-1);
@@ -19,7 +19,7 @@ int interpolation_search(int *array, size_t size, int value)
 	low = 0;
 	high = size - 1;
 
-	while (low < high)
+	while (low <= high)
 	{
 		denom = array[high] - array[low];
 
@@ -27,7 +27,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 		printf("Value checked array [%ld] ", idx);
 
-		if (idx < 0 || idx >= size)
+		if (idx >= size)
 		{
 			printf("is out of range\n");
 			break;
