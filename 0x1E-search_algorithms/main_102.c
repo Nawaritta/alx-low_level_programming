@@ -10,11 +10,11 @@
 int main(void)
 {
 	int array[] = {
-	        1, 2
+		7
 	};
 	size_t size = sizeof(array) / sizeof(array[0]);
 
-	printf("size = %lu, Found %d at index: %d\n\n", size, 1, interpolation_search(array, size, 1));
+	printf("Found %d at index: %d\n\n", 3, interpolation_search(array, size, 3));
 	printf("Found %d at index: %d\n\n", 7, interpolation_search(array, size, 7));
 	printf("Found %d at index: %d\n", 999, interpolation_search(array, size, 999));
 	return (EXIT_SUCCESS);
