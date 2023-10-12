@@ -34,12 +34,14 @@ int interpolation_search(int *array, size_t size, int value)
 		} else if (array[idx] < value)
 		{
 			low = idx + 1;
-
 		} else
 		{
 			high = idx - 1;
 		}
 	}
-	printf("Value checked array [%ld] is out of range\n", idx);
+	denom = array[high] - array[low];
+	idx = low + (((double)(high - low) / (denom)) * (value - array[low]));
+
+	printf("Value checked array [%lu] is out of range\n", idx);
 	return (-1);
 }
